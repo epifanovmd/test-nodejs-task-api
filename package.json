@@ -1,0 +1,70 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "REST API Template App",
+  "homepage": "https://epifanovmd.github.io/rest-api-template-app",
+  "license": "MIT",
+  "author": {
+    "name": "Epifanov Andrei",
+    "email": "epifanovmd@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epifanovmd/rest-api-template-app.git"
+  },
+  "scripts": {
+    "dev": "nodemon",
+    "build": "webpack",
+    "server": "yarn build && node build/server.js",
+    "generate": "tsoa routes && tsoa swagger",
+    "test": "mocha -r ts-node/register src/**/*.test.ts",
+    "lint": "tslint \"src/**/*{.ts}\"",
+    "lint:fix": "tslint --fix \"src/**/*{.ts}\"",
+    "prettier:fix": "prettier --parser typescript --write src/**/*.{json,ts,tsx}"
+  },
+  "dependencies": {
+    "cookie": "^0.4.0",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-helmet": "^5.2.0",
+    "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.6",
+    "koa2-ratelimit": "^0.9.0",
+    "koa2-swagger-ui": "^2.15.4",
+    "luxon": "^1.22.0",
+    "pg": "^7.12.1",
+    "sequelize": "^5.21.3",
+    "ts-node": "^8.4.1",
+    "tsoa": "^2.5.9",
+    "webpack": "^4.41.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.29",
+    "@types/chai": "^4.2.7",
+    "@types/chai-http": "^4.2.0",
+    "@types/cookie": "^0.3.3",
+    "@types/jsonwebtoken": "^8.3.5",
+    "@types/koa": "^2.11.0",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-helmet": "^3.1.2",
+    "@types/koa-router": "^7.0.42",
+    "@types/koa2-cors": "^2.0.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.7",
+    "@types/sha256": "^0.2.0",
+    "@types/socket.io": "^2.1.4",
+    "@types/validator": "^10.11.3",
+    "@types/webpack": "^4.39.8",
+    "@types/webpack-node-externals": "^1.6.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^7.0.0",
+    "prettier": "^1.19.1",
+    "ts-loader": "^6.2.1",
+    "ts-mocha": "^6.0.0",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
